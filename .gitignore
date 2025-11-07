@@ -19,6 +19,7 @@ yarn-error.log
 /.vscode
 # Arquivos e pastas do Docker
 /.docker
+.docker/mysql/dbdata/
 /docker
 /docker-compose.override.yml
 /docker-compose.local.yml
