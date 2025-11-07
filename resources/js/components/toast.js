@@ -20,7 +20,7 @@ const toast = (() => {
         </div>
       `,
       escapeMarkup: false,
-      className: 'toastify-success',
+      className: 'toastify toastify-success',
       ...options,
     }).showToast();
   };
@@ -34,7 +34,7 @@ const toast = (() => {
         </div>
       `,
       escapeMarkup: false,
-      className: 'toastify-danger',
+      className: 'toastify toastify-danger',
       ...options,
     }).showToast();
   };
@@ -48,7 +48,7 @@ const toast = (() => {
         </div>
       `,
       escapeMarkup: false,
-      className: 'toastify-warning',
+      className: 'toastify toastify-warning',
       ...options,
     }).showToast();
   };
@@ -62,7 +62,7 @@ const toast = (() => {
         </div>
       `,
       escapeMarkup: false,
-      className: 'toastify-info',
+      className: 'toastify toastify-info',
       ...options,
     }).showToast();
   };
