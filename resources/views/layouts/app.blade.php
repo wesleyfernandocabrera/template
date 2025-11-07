@@ -7,16 +7,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="{{ asset('images/logo-small.svg') }}" type="image/svg+xml" />
+    <link rel="icon" href="{{ asset('images/favicon.ico') }}" type="image/x-icon" />
 
-    <title>Analytics - Admin Toolkit</title>
+    <title>@yield('title', 'Inusittá')</title>
+
     <meta name="description"
         content="Admin Toolkit is a modern admin dashboard template based on Tailwindcss. It comes with a variety of useful ui components and pre-built pages" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-        rel="stylesheet" />
+
+    {{-- Manifest + PWA --}}
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#2563eb">
+
+<!-- iOS suporte -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Inusittá">
+
+<!-- Ícones Apple -->
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76.png">
+
 
     @vite(['resources/scss/app.scss', 'resources/js/app.js'])
 
@@ -34,9 +46,6 @@
     <script>
         window.currentRoute = '{{ Route::currentRouteName() }}';
     </script>
-
-    @vite(['resources/scss/app.scss', 'resources/js/app.js'])
-
 </head>
 
 <body>
@@ -71,6 +80,16 @@
         <x-search-modal />
         <!-- Search Modal Ends -->
     </div>
+
+    {{-- 🔹 Registrar Service Worker --}}
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker
+                .register("/service-worker.js")
+                .then(() => console.log("✅ Service Worker registrado"))
+                .catch((err) => console.error("Erro SW:", err));
+        }
+    </script>
 </body>
 
 </html>
