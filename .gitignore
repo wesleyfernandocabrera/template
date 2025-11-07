@@ -17,3 +17,17 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+# Arquivos e pastas do Docker
+/.docker
+/docker
+/docker-compose.override.yml
+/docker-compose.local.yml
+/.dockerenv
+/.dockerignore
+*.pid
+*.log
+
+# Volumes e dados temporários
+docker-data/
+docker-volumes/
+mysql-data/
