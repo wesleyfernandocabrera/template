@@ -33,4 +33,4 @@ docker-data/
 docker-volumes/
 mysql-data/
 /.vscode
-.docker/mysql/dbdata/
+.docker/mysql/dbdata
