@@ -32,4 +32,5 @@ yarn-error.log
 docker-data/
 docker-volumes/
 mysql-data/
+/.vscode
 .docker/mysql/dbdata/
