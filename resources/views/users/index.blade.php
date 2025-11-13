@@ -7,34 +7,6 @@
 
     <!-- Page Title Ends -->
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById('btn-trigger-toast-success')?.addEventListener('click', function() {
-        Toastify({
-            text: "Toast Success",
-            duration: 3000,
-            close: true,
-            gravity: "top",
-            position: "right",
-            backgroundColor: "#16a34a",
-        }).showToast();
-    });
-
-    document.getElementById('btn-trigger-toast-danger')?.addEventListener('click', function() {
-        Toastify({
-            text: "Toast Danger",
-            duration: 3000,
-            close: true,
-            gravity: "top",
-            position: "right",
-            backgroundColor: "#dc2626",
-        }).showToast();
-    });
-});
-</script>
-
-
-
 
     <!-- User List Starts -->
     <div class="space-y-4">

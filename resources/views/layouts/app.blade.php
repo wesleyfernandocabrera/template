@@ -71,6 +71,8 @@
                 </main>
                 <!-- Main Content Ends -->
 
+                    <!-- Toasts Globais -->
+               <x-toast />
                 <!-- Footer Starts -->
                 <x-footer />
                 <!-- Footer Ends -->

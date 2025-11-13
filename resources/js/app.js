@@ -83,7 +83,7 @@ import toast from './components/toast';
 
 // Tornando global
 window.showToast = toast;
-
+window.toast = toast; 
 
 // Initialize searchModal
 searchModal.init();

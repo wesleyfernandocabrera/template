@@ -67,7 +67,11 @@ class UserController extends Controller
             $user->roles()->sync($request->roles);
         }
 
-        return redirect()->route('users.index')->with('status', 'Usuário adicionado com sucesso.');
+        return redirect()
+    ->route('users.index')
+    ->with('toast_warning', 'Usuário criado com sucesso!');
+
+
     }
 
     public function edit(User $user)
