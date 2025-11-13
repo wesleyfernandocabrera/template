@@ -43,9 +43,6 @@ if (window.currentRoute === 'ecommerce.report') {
 } else if (window.currentRoute === 'form.validation') {
     import('./custom/form-validation.js').then(module => {
     }).catch(error => console.error("Error loading invoice-create.js:", error));
-} else if (window.currentRoute === 'common.toast') {
-    import('./custom/toast.js').then(module => {
-    }).catch(error => console.error("Error loading invoice-create.js:", error));
 } else if (window.currentRoute === 'common.modal') {
     import('./custom/modal.js').then(module => {
     }).catch(error => console.error("Error loading invoice-create.js:", error));
@@ -55,7 +52,12 @@ if (window.currentRoute === 'ecommerce.report') {
 }  else if (window.currentRoute === 'common.carousel') {
     import('./custom/carousel.js').then(module => {
     }).catch(error => console.error("Error loading invoice-create.js:", error));
-} 
+}  else if (window.currentRoute === 'common.toast' || window.enableToast === true) {
+    import('./custom/toast.js').then(module => {
+        window.showToast = module.default;
+    }).catch(error => console.error("Error loading toast.js:", error));
+}
+ 
 
 //Core components
 import accordion from './components/accordion';
@@ -75,6 +77,13 @@ import tabs from './components/tabs';
 import themeSwitcher from './components/theme-switcher';
 import tooltip from './components/tooltip';
 import uploader from './components/uploader';
+
+// Import do toast
+import toast from './components/toast';
+
+// Tornando global
+window.showToast = toast;
+
 
 // Initialize searchModal
 searchModal.init();

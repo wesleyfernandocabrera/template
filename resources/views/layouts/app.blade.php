@@ -29,8 +29,13 @@
 <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120.png">
 <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76.png">
 
+<script>
+    window.currentRoute = '{{ Route::currentRouteName() }}';
+    window.enableToast = true;
+</script>
 
-    @vite(['resources/scss/app.scss', 'resources/js/app.js'])
+@vite(['resources/scss/app.scss', 'resources/js/app.js'])
+
 
     <script>
         if (
@@ -43,9 +48,7 @@
         }
     </script>
 
-    <script>
-        window.currentRoute = '{{ Route::currentRouteName() }}';
-    </script>
+
 </head>
 
 <body>
