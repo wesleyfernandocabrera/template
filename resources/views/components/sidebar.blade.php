@@ -1,18 +1,19 @@
 <aside class="sidebar">
     <!-- Sidebar Header Starts -->
-    <a href="{{ route('dashboard') }}">
+    <a href="{{ route('home') }}">
         <div class="sidebar-header">
             <div class="sidebar-logo-icon">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                <x-application-logo class="w-20 h-15 fill-current text-gray-500" />
             </div>
 
             <div class="sidebar-logo-text">
                 <h1 class="flex text-xl">
-                    <span class="font-bold text-slate-800 dark:text-slate-200"> Admin </span>
-                    <span class="font-semibold text-primary-500">Toolkit</span>
+                    
+                    <span class="whitespace-nowrap text-base  dark:text-slate-200"> {{ $settings?->companie_name ?? 'Nome da Empresa' }} </span>
+                    
                 </h1>
 
-                <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
+                <p class="whitespace-nowrap text-xs text-slate-400">  {{ $settings?->companie_description ?? 'Descrição da Empresa' }}</p>
             </div>
         </div>
     </a>

@@ -6,6 +6,8 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\SettingController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -84,6 +86,8 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/phones', [UserController::class, 'phones'])->name('phones');
     });
 
+
+
     /*
     |--------------------------------------------------------------------------
     | Perfil do Usuário Logado
@@ -103,6 +107,17 @@ Route::middleware(['auth'])->group(function () {
     */
     Route::resource('menus', MenuController::class);
     Route::resource('roles', RoleController::class);
+
+    /*--------------------------------------------------------------------------
+    | Configurações do Sistema
+    |--------------------------------------------------------------------------*/
+        
+   
+
+    Route::get('/settings', [SettingController::class, 'edit'])->name('settings.edit');
+    Route::post('/settings', [SettingController::class, 'update'])->name('settings.update');
+
+
 
     /*
     |--------------------------------------------------------------------------
